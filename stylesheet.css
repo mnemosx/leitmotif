@@ -1,0 +1,430 @@
+html, body {
+    width: 100%;
+    font-size: 16px;
+    height: 100%; 
+   /* overflow: hidden; */
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+    /* ------------- header -------------- */
+
+#header {
+    width: 100%;
+    background-color: #000000;
+    height: 80px;
+    text-align: center;
+    transform-style: preserve-3d; /* lai nebūtu problēmu ar searchbox vertical alignment */
+}
+
+
+#logo{
+    display: block;
+    float: left;
+    margin: 16px 0px 0px 95px;
+}
+
+#logo a {
+    text-decoration: none;
+    font-size: 2.5rem;
+    color: #e6dbdb;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: -3px;
+}
+
+#header > span {
+    float: left;
+    display: block;
+    position: absolute;
+    z-index: 1000000;
+    color: #e6dbdb;
+    margin: 20px 0 0 50px;
+}
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 100000;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 6em;
+    font-family: 'Raleway', sans-serif;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.closebtn {
+    position: absolute;
+    display: block;
+    flex: left;
+    margin: -45px 0 0 15px;
+    font-size: 7em !important;
+}
+
+
+
+
+
+        /* ------------- SEARCH -------------- */
+        /* Vēl nepieciešams:
+                >lai searchbox pazūd
+                >enter kā submit
+                > search suggestions? 
+                > lai navbar ir centrā, kad search nav atvērts, bet lai pabīdās, kad uzspiež uz search ikonas
+                > normāli vertikāli centrēt*/
+
+@keyframes active {
+  0% { visibility:hidden; }
+  100% { visibility: visible; }
+} 
+
+#search {
+    float: right;
+    margin-top: 37px;
+    transform: translateY(-50%);
+}
+
+#searchbox {
+    border: 0;
+    border-radius: 25px;
+    outline: none;
+    background: #9f9090;
+    padding: 6px;
+    animation-name: active;
+    animation-duration: 1s;
+    animation-play-state: paused; 
+}
+
+.fa-search {
+    display: block;
+    float: right;
+    color: #e6dbdb;
+    padding: 5px 20px 5px 10px;
+    cursor: pointer;
+}
+
+.fa-search:active + #searchbox {
+    animation-play-state: running;
+}
+
+::-webkit-input-placeholder {
+    color: black;
+    text-align: right;
+}
+
+ /* ------------- top-left ------------*/
+
+#kaste1 {
+    float: left;
+    width: 60%;
+    height: 45%;
+}
+
+#box1 {
+    position: relative;
+    float: left;
+    width: 40%;
+    height: 50%;
+    text-align: center;
+}
+
+#text-bg-1 {
+    background-image: url("images/addams.jpg");           /* vjadzētu bildes likt iekš html, 
+                                                            lai varētu vispār atbrīvoties no 11 text-bg-x */
+}
+
+#box2 {
+    position: relative;
+    float: left;
+    width: 40%;
+    height: 50%;
+    text-align: center;
+}
+
+#text-bg-2 {
+    background-image: url("images/breaking.jpg");
+}
+
+#box3 {
+    position: relative;
+    float: right;
+    width: 60%;
+    height: 100%;
+    text-align: center;
+}
+
+#text-bg-3 {
+    background-image: url("images/ateam.jpg");
+}
+
+/* ------------- top-right ------------*/
+
+#kaste2 {
+    float: right;
+    width: 40%;
+    height: 45%;
+}
+
+#box4 {
+    position: relative;
+    float: right;
+    width: 60%;
+    height: 100%;
+    text-align: center;
+}
+
+#text-bg-4 {
+    background-image: url("images/tmnt.jpg");
+
+}
+
+#box5 {
+    position: relative;
+    float: left;
+    width: 40%;
+    height: 100%;
+    text-align: center;
+}
+
+#text-bg-5 {
+    background-image: url("images/MI.jpg");
+}
+
+
+/* ------------- bottom-left ------------*/
+
+#kaste3 {
+    float: left;
+    width: 40%;
+    height: 45%;
+}
+
+#box6 {
+    position: relative;
+    float: left;
+    width: 60%;
+    height: 100%;
+    text-align: center;
+}
+
+#text-bg-6 {
+    background-image: url("images/fallout.jpg");
+}
+
+#box7 {
+    position: relative;
+    float: right;
+    width: 40%;
+    height: 50%;
+    text-align: center;
+}
+
+#text-bg-7 {
+    background-image: url("images/got.jpg");
+  
+}
+
+#box8 {
+    position: relative;
+    float: right;
+    width: 40%;
+    height: 50%;
+    text-align: center;
+}
+
+#text-bg-8 {
+    background-image: url("images/knight.jpg");
+}
+
+/* ------------- bottom-right ------------*/
+
+#kaste4 {
+    float: right;
+    width: 60%;
+    height: 45%;
+}
+
+#box9 {
+    position: relative;
+    float: left;
+    width: 33.4%;
+    height: 50%;
+    text-align: center;
+}
+
+#text-bg-9 {
+    background-image: url("images/mario.jpg");
+}
+
+#box10 {
+    position: relative;
+    float: left;
+    width: 33.4%;
+    height: 50%;
+    text-align: center;
+}
+
+#text-bg-10 {
+    background-image: url("images/pink.png");
+}
+
+#box11 {
+    position: relative;
+    float: right;
+    width: 66.6%;
+    height: 100%;
+    text-align: center;
+}
+
+#text-bg-11 {
+    background-image: url("images/batman.jpg");
+}
+
+#text-bg-1, #text-bg-2, #text-bg-3, #text-bg-5, #text-bg-6, #text-bg-7, #text-bg-8, #text-bg-9, #text-bg-10, #text-bg-11, #text-bg-4 {
+    -moz-filter: blur(2px);
+    -ms-filter: blur(2px);
+    -o-filter: blur(2px);
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+    background-color: black;
+    opacity: 0.4;
+    box-shadow: inset 0 0 0 1000px rgba(111, 111, 111, 0.3);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0px; right: 0px; bottom: 0px; left: 0px;
+    z-index: 99;
+}
+
+#text-bg-1:hover, #text-bg-2:hover, #text-bg-3:hover, #text-bg-5:hover, #text-bg-6:hover, #text-bg-7:hover, #text-bg-8:hover, #text-bg-9:hover, #text-bg-10:hover, #text-bg-11:hover, #text-bg-4:hover {
+    -moz-filter: blur(0px);
+    -ms-filter: blur(0px);
+    -o-filter: blur(0px);
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+}
+
+.texts {
+    position: relative;
+    z-index: 100;
+    color: rgba(199, 199, 199, 0.59);
+    text-align: center;
+    margin: 50px 15%;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    font-size: 1.5vw;
+    letter-spacing: 6px;
+    text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.56)
+}
+
+#box11 > #texts, #box6 > #texts {
+    margin: 60px 30%;
+}
+#box3 > #texts, #box4 > #texts {
+    margin: 60px 35%;
+}
+#box8 > #texts {
+    margin: 50px 9%;
+}
+#box7 > #texts {
+    margin: 50px 40%;
+}
+
+.btn-wrap {
+    position: relative;
+    background: none;
+    width: 140px;
+    height: 1px;
+    top: -15%;
+    margin: 0 auto;
+    z-index: 988;
+}
+
+.play {
+    background: none; 
+    cursor: pointer;
+    color: rgba(168, 180, 183, 0.2); 
+    font-size: 3vw; 
+    outline: none;
+    border: none;
+    padding: 0 10px;
+    z-index: 1000;
+}
+.play:hover {
+    color: rgba(168, 180, 183, 0.77); 
+}
+
+#box3 > .btn-wrap, #box4 > .btn-wrap, #box5 > .btn-wrap, #box6 > .btn-wrap, #box11 > .btn-wrap {
+    top: 15%;
+}
+    
+
+@media only screen and (max-width: 900px) {
+    html, body {
+        overflow: visible;
+    }
+    
+    #search {
+        display: none;
+        padding: 0;
+    }
+   
+    #header {
+        background: black;
+        background: -webkit-linear-gradient(left, black , rgb(15, 15, 15)); 
+        background: -o-linear-gradient(right, black, rgb(15, 15, 15));
+        background: -moz-linear-gradient(right, black, rgb(15, 15, 15)); 
+        background: linear-gradient(to right, black , rgb(15, 15, 15)); 
+    }
+    
+    #kaste1, #kaste2, #kaste3, #kaste4 {
+        float: none;
+        width: 100%;
+    }
+    
+    .texts {
+        font-size: 2.5vw;
+    }
+    .play {
+        font-size: 6vw;
+    }
+}
+
+
+
+
+#wrapperis {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    height: 95%;
+}

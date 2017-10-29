@@ -1,0 +1,89 @@
+#header {
+    width: 100%;
+    background-color: #000000;
+   /* height: 70px; */
+    text-align: center;
+    transform-style: preserve-3d; /* lai nebūtu problēmu ar searchbox vertical alignment */
+}
+
+.menu {
+    display: none;
+}
+
+#navbar {
+    padding: 30px 0;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: #e6dbdb;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.8rem;
+    padding: 10px 20px;
+    margin: 0 1.4%;
+}
+#navbar a:hover{
+    color: #938c8c;
+}
+
+#logo{
+    display: block;
+    float: left;
+    margin: 16px 0px 0px 35px;
+}
+
+#logo a {
+    text-decoration: none;
+    font-size: 2.5rem;
+    color: #e6dbdb;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: -3px;
+}
+        /* ------------- SEARCH -------------- */
+        /* Vēl nepieciešams:
+                >lai searchbox pazūd
+                >enter kā submit
+                > search suggestions? 
+                > lai navbar ir centrā, kad search nav atvērts, bet lai pabīdās, kad uzspiež uz search ikonas
+                > normāli vertikāli centrēt*/
+
+@keyframes active {
+  0% { visibility:hidden; }
+  100% { visibility: visible; }
+} 
+
+#search {
+    float: right;
+    padding-top: 15px;
+    transform: translateY(-50%);
+}
+
+#searchbox {
+    border: 0;
+    border-radius: 25px;
+    outline: none;
+    background: #9f9090;
+    padding: 6px;
+    animation-name: active;
+    animation-duration: 1s;
+    animation-play-state: paused; 
+}
+
+.fa-search {
+    display: block;
+    float: right;
+    color: #e6dbdb;
+    padding: 5px 20px 5px 10px;
+    cursor: pointer;
+}
+
+.fa-search:active + #searchbox {
+    animation-play-state: running;
+}
+
+::-webkit-input-placeholder {
+    color: black;
+    text-align: right;
+}

@@ -1,0 +1,28 @@
+rgba caurpsîdîgs fons virs bildçm - https://youtu.be/bEzxTJJM5Bo?t=674
+
+zem 680px jâpârtaisa main, lai bildes kârtojas cita zem citas
+
+jâpârraksta javascript, lai bûtu tikai viena play poga, kas mainâs
+
+pop-up sâkumâ "Site is still a work in progress. For improvement ideas and suggestions e.g. nicer fonts and colors, please contact me at mnemosx@gmail.com."
+___________
+Target IE 8 and LOWER
+
+<!--[if lte IE 9]>
+	<link rel="stylesheet" type="text/css" href="time-to-get-out-of-that-cave.css" />
+<![endif]-->
+___________
+
+? pçc 2 min pop up "want more?" ar linku uz visiem ?
+
+pielâgot telefona touchscreenam - mainît blur; vai play darbosies?
+
+menu pogai pielikt animâciju (https://github.com/daneden/animate.css), lai ik pa brîdim pakratâs poga (vai pçc intervâla: animation-delay: 5s;)
+
+background bildes likt caur html, lai nav iekð css
+
+pievienot download pogu (<a download=".." ?)
+
+testçt uz visiem pârlûkiem, padarît maximâli pieejamu visiem.
+
+fallbacks?
